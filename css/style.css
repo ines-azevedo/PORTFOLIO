@@ -1,0 +1,899 @@
+/* ==========================================================================================================================
+   ÍNDICE
+
+   1. COMMON TO ALL PAGES ---------> Font, Reset, General Attributes, Titles & Text, Layout, Menu, Sections, Section First,
+                                     Section Title, Page Title, Blue Stripe, Call to Action, Buttons, Footer
+   2. MAIN PAGE -------------------> Presentation, Project Carousel
+   3. DESIGN & ILLUSTRATION PAGES -> Page Intro, Project Card
+        3.1 PROJECT PAGES ---------> Project Header, Project Gallery, Project Text, Process Maps
+   4. ABOUT ME PAGE ---------------> About, Info Block, Tables
+   5. CONTACT PAGE ----------------> Contact Form
+   ========================================================================================================================== */
+
+/* ------------------------------------------- COMMON TO ALL PAGES ----------------------------------------------------------- */
+
+/* -------- FONT ------------------------------------------------------------------------------------------------------------- */
+@font-face {
+    /* @font-face serve para utilizar uma font que não vem previamente instalada em todos os computadores */
+    font-family: 'ClashDisplay-Variable';
+    src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+        url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    /* intervalo de pesos que a fonte variável suporta */
+    font-display: swap;
+    /* mostra logo o texto com a fonte de reserva enquanto a Clash Display carrega */
+    font-style: normal;
+}
+
+/* -------- .FONT ------------------------------------------------------------------------------------------------------------ */
+
+/* -------- RESET ------------------------------------------------------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+    /* padding e border passam a contar para dentro da largura/altura do elemento */
+}
+
+/* -------- .RESET ----------------------------------------------------------------------------------------------------------- */
+
+/* -------- GENERAL ATTRIBUTES ----------------------------------------------------------------------------------------------- */
+html {
+    scroll-padding-top: 10rem;
+    /* espaço reservado no topo ao saltar para uma âncora; ajusta à altura da nav */
+}
+
+body {
+    font-family: "ClashDisplay-Variable", sans-serif;
+    line-height: 1.5;
+    background-color: #FFFAE5;
+    color: #1973DE;
+}
+
+/* -------- .GENERAL ATTRIBUTES ---------------------------------------------------------------------------------------------- */
+
+/* -------- TITLES & TEXT ---------------------------------------------------------------------------------------------------- */
+h1,
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+
+main p {
+    color: #1973DE;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    main {
+        font-size: 1.5rem;
+        /* tamanho do texto no desktop: tudo o que não tiver tamanho próprio herda este valor */
+    }
+}
+
+/* -------- .TITLES & TEXT --------------------------------------------------------------------------------------------------- */
+
+/* -------- LAYOUT ----------------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.side-margin {
+    padding-inline: 1.5rem;
+    /* padding-inline = padding-left e padding-right ao mesmo tempo */
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .side-margin {
+        padding-inline: 3rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .side-margin {
+        padding-inline: 5rem;
+    }
+}
+
+/* -------- .LAYOUT ---------------------------------------------------------------------------------------------------------- */
+
+/* -------- MENU ------------------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.navbar {
+    /* Redefinição das variáveis CSS na navbar */
+    --bs-navbar-color: #1973DE;
+    --bs-navbar-hover-color: #FF1D93;
+    --bs-navbar-active-color: #FF1D93;
+    --bs-navbar-padding-y: 1.5rem;
+
+    background-color: #FFFAE5;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.nav-logo {
+    height: 4rem;
+    width: auto;
+}
+
+.navbar-nav {
+    --bs-nav-link-padding-y: 0.25rem;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.navbar-toggler {
+    border: 0;
+    /* tira a caixa à volta do botão */
+    padding: 0;
+    color: #1973DE;
+    /* o ícone herda esta cor */
+    font-size: 2.5rem;
+    /* tamanho do ícone */
+    line-height: 1;
+}
+
+.navbar-toggler:hover {
+    color: #FF1D93;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.125rem #1973DE;
+    /* contorno visível ao navegar com o teclado */
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .navbar {
+        --bs-navbar-padding-y: 2rem;
+        font-size: 1.25rem;
+    }
+
+    .nav-logo {
+        height: 6.25rem;
+    }
+}
+
+/* -------- .MENU ------------------------------------------------------------------------------------------------------------ */
+
+/* -------- SECTIONS --------------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* espaço acima e abaixo de cada secção */
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/* -------- .SECTIONS -------------------------------------------------------------------------------------------------------- */
+
+/* -------- SECTION FIRST ---------------------------------------------------------------------------------------------------- */
+.section-first {
+    padding-top: 3rem;
+    /* primeira secção das páginas interiores: menos espaço por baixo do menu */
+}
+
+/* -------- .SECTION FIRST --------------------------------------------------------------------------------------------------- */
+
+/* -------- SECTION TITLE ---------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* -------- .SECTION TITLE --------------------------------------------------------------------------------------------------- */
+
+/* -------- PAGE TITLE ------------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .page-title {
+        font-size: 5rem;
+    }
+}
+
+/* -------- .PAGE TITLE ------------------------------------------------------------------------------------------------------ */
+
+/* -------- BLUE STRIPE ------------------------------------------------------------------------------------------------------ */
+.stripe {
+    background-color: #1973DE;
+    color: #FFFAE5;
+    overflow: hidden;
+    /* esconde o que sai do ecrã, para não aparecer scroll horizontal */
+    padding-block: 1.25rem;
+    /* padding-block = padding-top e padding-bottom ao mesmo tempo */
+}
+
+.stripe-box {
+    display: flex;
+    width: max-content;
+    /* a box ocupa a largura dos dois grupos juntos */
+    animation: slide-left 30s linear infinite;
+    /* usa a animação slide-left, que dura 30 segundos, com velocidade constante (linear), e repete para sempre (infinite) */
+}
+
+.stripe-group {
+    display: flex;
+    flex-shrink: 0;
+    /* para que os elementos possam sair da página sem encolher */
+}
+
+.stripe-group span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    /* para nunca quebrar o texto para a linha seguinte */
+}
+
+.stripe-group span::after {
+    content: "|";
+    margin-inline: 1.5rem;
+    /* separador entre as palavras */
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .stripe-group span {
+        font-size: 1.75rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .stripe-group span {
+        font-size: 2.5rem;
+    }
+}
+
+/* a box tem 2 grupos iguais: ao andar -50% (um grupo inteiro), volta ao início sem se notar */
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+        /* move um elemento na horizontal sem alterar o layout à volta */
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* -------- .BLUE STRIPE ----------------------------------------------------------------------------------------------------- */
+
+/* -------- CALL TO ACTION --------------------------------------------------------------------------------------------------- */
+.title-cta {
+    font-size: 2rem;
+    color: #FF1D93;
+}
+
+.title-cta a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.title-cta a:hover,
+.title-cta a:focus {
+    text-decoration: underline;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FF1D93;
+}
+
+.cta-buttons {
+    max-width: 25rem;
+    /* limita o comprimento dos botões: no telemóvel continuam a ocupar a largura toda até este limite */
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .title-cta {
+        font-size: 3rem;
+    }
+
+    .cta-buttons {
+        font-size: 1.25rem;
+        margin-left: auto;
+        /* empurra o grupo de botões para a direita da coluna */
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .title-cta {
+        font-size: 4.5rem;
+    }
+}
+
+/* -------- .CALL TO ACTION -------------------------------------------------------------------------------------------------- */
+
+/* -------- BUTTONS ---------------------------------------------------------------------------------------------------------- */
+.btn-site {
+    /* Redefinição das variáveis CSS dos botões do Bootstrap */
+    --bs-btn-padding-y: 0.75rem;
+    --bs-btn-font-weight: 700;
+    --bs-btn-hover-color: #FFFAE5;
+    --bs-btn-hover-bg: #FF1D93;
+    --bs-btn-hover-border-color: #FF1D93;
+    --bs-btn-active-color: #FFFAE5;
+    --bs-btn-active-bg: #FF1D93;
+    --bs-btn-active-border-color: #FF1D93;
+
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.btn-site-filled {
+    --bs-btn-color: #FFFAE5;
+    --bs-btn-bg: #1973DE;
+    --bs-btn-border-color: #1973DE;
+}
+
+.btn-site-outline {
+    --bs-btn-color: #1973DE;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #1973DE;
+}
+
+/* -------- .BUTTONS --------------------------------------------------------------------------------------------------------- */
+
+/* -------- FOOTER ----------------------------------------------------------------------------------------------------------- */
+.footer {
+    border-top: 0.0625rem solid #1973DE;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus {
+    color: #FF1D93;
+}
+
+.footer-copy {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+/* -------- .FOOTER ---------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------- .COMMON TO ALL PAGES ---------------------------------------------------------- */
+
+
+/* ------------------------------------------- MAIN PAGE --------------------------------------------------------------------- */
+
+/* -------- PRESENTATION ----------------------------------------------------------------------------------------------------- */
+.presentation-img {
+    width: 100%;
+    max-width: 20rem;
+    /* limita a largura da imagem no telemóvel */
+    aspect-ratio: 3 / 4;
+    /* proporção da imagem do wireframe */
+    object-fit: cover;
+    /* corta a imagem em vez de a deformar */
+}
+
+.presentation-title {
+    font-size: 2.25rem;
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .presentation-img {
+        max-width: none;
+        /* a partir daqui é a coluna do Bootstrap que controla a largura */
+        aspect-ratio: 4 / 5;
+        /* imagem menos comprida do que no telemóvel */
+    }
+
+    .presentation-text {
+        margin-top: 7.5rem;
+        /* afasta o texto do topo da coluna, para o alinhar com a imagem na vertical */
+    }
+
+    .presentation-title {
+        font-size: 3rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+
+    .presentation-text {
+        margin-top: 15rem;
+    }
+
+    .presentation-title {
+        font-size: 4rem;
+        margin-left: -7.5rem;
+        /* margem negativa: puxa o título para a esquerda, por cima da imagem */
+    }
+}
+
+/* -------- .PRESENTATION ---------------------------------------------------------------------------------------------------- */
+
+/* -------- PROJECT CAROUSEL ------------------------------------------------------------------------------------------------- */
+.projects {
+    overflow: hidden;
+}
+
+.projects-box {
+    display: flex;
+    width: max-content;
+    animation: slide-right 40s linear infinite;
+}
+
+.projects-box:hover {
+    animation-play-state: paused;
+    /* pára quando o rato passa por cima, para dar tempo de ver as imagens */
+}
+
+.projects-group {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.projects-item {
+    width: 16rem;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    /* margin em vez de gap: assim o grupo inclui o espaço final e o loop fica sem saltos */
+    flex-shrink: 0;
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .projects-item {
+        width: 30rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .projects-item {
+        width: 40rem;
+    }
+}
+
+/* a box tem 2 grupos iguais: ao andar -50% (um grupo inteiro), volta ao início sem se notar */
+@keyframes slide-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* -------- .PROJECT CAROUSEL ------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------- .MAIN PAGE -------------------------------------------------------------------- */
+
+
+/* ------------------------------------------- DESIGN & ILLUSTRATION PAGES --------------------------------------------------- */
+
+/* -------- PAGE INTRO ------------------------------------------------------------------------------------------------------- */
+.page-intro {
+    max-width: 40rem;
+    /* limita a largura do texto para ser mais fácil de ler */
+    margin-bottom: 3rem;
+}
+
+/* -------- .PAGE INTRO ------------------------------------------------------------------------------------------------------ */
+
+/* -------- PROJECT CARD ----------------------------------------------------------------------------------------------------- */
+.project-card {
+    display: block;
+    /* o link passa a ocupar o cartão todo, e não só o texto */
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-card-img {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.project-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* se não couberem na linha, as etiquetas passam para a linha de baixo */
+    gap: 0.5rem;
+    margin-bottom: 0;
+}
+
+.project-tag {
+    padding: 0.25rem 0.75rem;
+    border: 0.0625rem solid #1973DE;
+    border-radius: 2rem;
+    /* cantos arredondados, como os botões */
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.project-card:hover .project-card-title,
+.project-card:focus .project-card-title {
+    color: #FF1D93;
+    /* o título fica rosa ao passar o rato, para mostrar que é clicável */
+}
+
+.project-card:hover .project-tag,
+.project-card:focus .project-tag {
+    border-color: #FF1D93;
+    color: #FF1D93;
+    /* as etiquetas ficam rosa ao passar o rato, como o título */
+}
+
+/* -------- .PROJECT CARD ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- .DESIGN & ILLUSTRATION PAGES -------------------------------------------------- */
+
+/* ------------------------------------------- PROJECT PAGES ----------------------------------------------------------------- */
+/* -------- PROJECT HEADER --------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.project-meta {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FF1D93;
+}
+
+.project-aside-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.project-list {
+    margin-bottom: 2rem;
+    padding-left: 1.25rem;
+    /* menos recuo do que o padrão do Bootstrap */
+    color: #FF1D93;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .project-meta {
+        font-size: 1.25rem;
+    }
+}
+
+/* -------- .PROJECT HEADER -------------------------------------------------------------------------------------------------- */
+
+/* -------- PROJECT GALLERY -------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.project-gallery {
+    margin-top: 3rem;
+    /* espaço entre o texto e as imagens */
+}
+
+.project-caption {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* todas as imagens ficam com a mesma proporção */
+    object-fit: cover;
+    /* corta a imagem em vez de a deformar */
+    object-position: center top;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .project-gallery {
+        margin-top: 5rem;
+    }
+}
+
+/* -------- .PROJECT GALLERY ------------------------------------------------------------------------------------------------- */
+
+/* -------- PROJECT TEXT ----------------------------------------------------------------------------------------------------- */
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .project-section p,
+    .project-section li,
+    .project-list {
+        font-size: 1.25rem;
+    }
+}
+/* -------- .PROJECT TEXT ---------------------------------------------------------------------------------------------------- */
+
+/* -------- PROCESS MAPS ----------------------------------------------------------------------------------------------------- */
+/* --- BASE TELEMÓVEL --- */
+.maps-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* todos os slides têm a mesma proporção */
+    object-fit: contain;
+    /* contain: mostra o mapa inteiro, sem cortar (são esquemas com informação em todo o lado) */
+    border: 0.0625rem solid #1973DE;
+}
+
+.maps-controls {
+    margin-top: 1.5rem;
+}
+
+.maps-indicators {
+    /* o Bootstrap põe as bolinhas por cima da imagem; aqui ficam entre os dois botões */
+    position: static;
+    margin: 0;
+}
+
+.maps-indicators [data-bs-target] {
+    width: 1rem;
+    height: 0.25rem;
+    background-color: #1973DE;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .maps-img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .maps-indicators [data-bs-target] {
+        width: 2rem;
+    }
+}
+
+/* -------- .PROCESS MAPS ---------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------- .PROJECT PAGES ---------------------------------------------------------------- */
+
+
+/* ------------------------------------------- ABOUT ME PAGE ----------------------------------------------------------------- */
+
+/* -------- ABOUT ------------------------------------------------------------------------------------------------------------ */
+/* --- BASE TELEMÓVEL --- */
+.about-figure {
+    position: relative;
+    /* serve de referência para posicionar o nome em cima da imagem */
+    margin: 0;
+}
+
+.about-img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.about-name {
+    position: relative;
+    z-index: 1;
+    /* fica à frente da imagem */
+    margin-top: -2rem;
+    /* sobe o nome para cima da parte de baixo da imagem */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: right;
+    color: #FF1D93;
+}
+
+/* --- TABLET --- */
+@media (min-width: 768px) {
+    .about-name {
+        position: absolute;
+        /* tira o nome do fluxo normal e posiciona-o em relação ao .about-figure */
+        left: -5rem;
+        /* negativo: o nome sai para fora da imagem, à esquerda */
+        bottom: 3rem;
+        margin-top: 0;
+        font-size: 3rem;
+    }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .about-img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .about-name {
+        left: -7rem;
+        font-size: 4.5rem;
+    }
+}
+
+/* -------- .ABOUT ----------------------------------------------------------------------------------------------------------- */
+
+/* -------- INFO BLOCK (philosophy e process) -------------------------------------------------------------------------------- */
+.info-block {
+    border-top: 0.0625rem solid #1973DE;
+    padding-top: 1rem;
+}
+
+.info-number {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #FF1D93;
+}
+
+.info-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .info-block p {
+        font-size: 1.25rem;
+    }
+}
+
+/* -------- .INFO BLOCK (philosophy e process) ------------------------------------------------------------------------------- */
+
+/* -------- TABLES ----------------------------------------------------------------------------------------------------------- */
+.about-table {
+    /* Redefinição das variáveis CSS da tabela do Bootstrap */
+    --bs-table-bg: transparent;
+    --bs-table-color: #1973DE;
+    --bs-table-border-color: #1973DE;
+
+    table-layout: fixed;
+    /* as colunas passam a ter a largura definida em baixo, em vez da largura do conteúdo */
+    min-width: 30rem;
+    /* abaixo desta largura a tabela deixa de encolher e ganha scroll horizontal (table-responsive), para a coluna do ano não ficar esmagada */
+}
+
+.about-table th {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FF1D93;
+}
+
+/* larguras das colunas, no esquema de 12 */
+.about-table th:nth-child(1) {
+    width: 35%;
+    /* ~4/12 */
+}
+
+.about-table th:nth-child(2) {
+    width: 50%;
+    /* 6/12 */
+}
+
+.about-table th:nth-child(3) {
+    width: 15%;
+    /* ~2/12 */
+}
+
+.about-table td {
+    font-size: 1.25rem;
+}
+
+.about-table td:first-child {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* -------- .TABLES ---------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------- .ABOUT ME PAGE ---------------------------------------------------------------- */
+
+
+/* ------------------------------------------- CONTACT PAGE ------------------------------------------------------------------ */
+
+/* -------- CONTACT FORM ----------------------------------------------------------------------------------------------------- */
+.contact-form .form-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    /* o padding da direita não se mexe: o select precisa dele para a seta */
+    border: 0.0625rem solid #1973DE;
+    border-radius: 2rem;
+    /* cantos arredondados, como no wireframe */
+    background-color: transparent;
+    color: #1973DE;
+    font-size: 1.25rem;
+}
+
+.contact-form textarea.form-control {
+    border-radius: 1.5rem;
+    /* um raio mais pequeno, para a caixa grande não ficar demasiado redonda */
+    resize: vertical;
+    /* só se pode esticar para baixo, para não estragar o layout */
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    background-color: transparent;
+    color: #1973DE;
+    border-color: #FF1D93;
+    box-shadow: 0 0 0 0.125rem #FF1D93;
+    /* contorno visível ao navegar com o teclado */
+}
+
+/* --- BASE TELEMÓVEL --- */
+.contact-buttons {
+    margin-top: 3rem;
+    /* espaço entre a mensagem e os botões */
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 992px) {
+    .contact-buttons {
+        margin-top: 4rem;
+    }
+}
+
+/* -------- .CONTACT FORM ---------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------- .CONTACT PAGE ----------------------------------------------------------------- */

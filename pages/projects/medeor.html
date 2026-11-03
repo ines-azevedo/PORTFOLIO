@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medeor // Inês Azevedo</title>
+
+    <!-- -------- FAVICON --------------------------------------------------------------------------------------------------- -->
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+    <!-- -------- LINK BOOTSTRAP -------------------------------------------------------------------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- -------- LINK BOOTSTRAP ICONS -------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- -------- LINK CSS -------------------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <!-- -------- MENU ------------------------------------------------------------------------------------------------------ -->
+    <nav class="navbar navbar-expand-md sticky-top" aria-label="Main navigation">
+        <div class="container-fluid side-margin">
+
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../images/logo2.png" alt="Inês Azevedo - logo" class="nav-logo">
+            </a>
+
+            <!-- hamburguer button -->
+            <!-- (só aparece em ecrãs pequenos) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Open menu">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto gap-md-4 gap-lg-5">
+                    <li class="nav-item"><a class="nav-link active" href="../design.html">Design</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../illustration.html">Illustration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- -------- .MENU ----------------------------------------------------------------------------------------------------- -->
+
+    <main>
+        <!-- -------- PROJECT HEADER ------------------------------------------------------------------------------------- -->
+        <section class="side-margin section section-first" aria-labelledby="project-title">
+            <div class="row g-4 g-md-5">
+
+                <div class="col-12 col-lg-7">
+                    <h1 id="project-title" class="page-title">Medeor</h1>
+                    <p class="project-meta">Service Design · 2023</p>
+                    <p>The impact of end-of-life pharmaceuticals on public health and the environment is a problem that
+                        exists primarily because of the users who consume these by-products. As such, we designed a
+                        service that addresses and improves this issue, either by raising awareness or by facilitating
+                        the process.</p>
+                    <p>The solution is a specialized medication pickup service, available by scheduling an appointment
+                        through the webapp.</p>
+                </div>
+
+                <aside class="col-12 col-lg-4 offset-lg-1" aria-label="Project details">
+                    <h2 class="project-aside-title">Tools</h2>
+                    <ul class="project-list">
+                        <li>Miro</li>
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                    </ul>
+
+                    <h2 class="project-aside-title">Team</h2>
+                    <ul class="project-list">
+                        <li>Carlos Alves</li>
+                        <li>Leonor Lopes</li>
+                        <li>Thomas Fresco</li>
+                    </ul>
+
+                    <a href="https://www.behance.net/gallery/238078639/medeor"
+                        class="btn btn-site btn-site-outline rounded-pill" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-behance" aria-hidden="true"></i> View on Behance
+                    </a>
+                </aside>
+
+            </div>
+
+            <!-- imagem principal: não leva loading="lazy" porque aparece logo ao abrir a página -->
+            <div class="project-gallery">
+                <img src="../../images/medeor-hero.png"
+                    alt="Two Medeor posters in street display boards with the message 'Recolha segura à distância de um clique'"
+                    class="img-fluid">
+            </div>
+        </section>
+        <!-- -------- .PROJECT HEADER ------------------------------------------------------------------------------------ -->
+
+        <!-- -------- PROCESS -------------------------------------------------------------------------------------------- -->
+        <section class="side-margin section project-section" aria-labelledby="process-title">
+            <!-- offset-lg-5: o texto começa a meio da página -->
+            <div class="row">
+                <div class="col-12 col-lg-7 offset-lg-5">
+                    <h2 id="process-title" class="section-title">Process</h2>
+                    <p>The project started with research, through observation and interviews, to understand how people
+                        deal with medications they no longer need. The findings were organised in journey maps and
+                        system maps, and the research was revisited before ideas were discussed and selected.
+                        Jobs-to-be-done and the value proposition canvas defined the value proposition, which was then
+                        turned into a service blueprint.</p>
+                </div>
+            </div>
+
+            <!-- esquema geral do processo -->
+            <div class="project-gallery">
+                <figure class="m-0">
+                    <img src="../../images/medeor-process.png"
+                        alt="Diagram of the Medeor process, from user recruitment and research to the validation of the service"
+                        class="img-fluid" loading="lazy">
+                    <figcaption class="project-caption">Process overview</figcaption>
+                </figure>
+            </div>
+
+            <!-- galeria de mapas: carrossel do Bootstrap -->
+            <div id="mapsCarousel" class="carousel slide maps-carousel project-gallery" role="region"
+                aria-roledescription="carousel" aria-label="Process maps">
+
+                <div class="carousel-inner">
+
+                    <!-- o primeiro slide leva a classe "active", senão o carrossel aparece vazio -->
+                    <div class="carousel-item active">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-journey-maps-1.png"
+                                alt="Journey maps of the medication disposal experience" class="maps-img"
+                                loading="lazy">
+                            <figcaption class="project-caption">Journey maps</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-journey-maps-2.png"
+                                alt="Journey maps of the medication disposal experience" class="maps-img"
+                                loading="lazy">
+                            <figcaption class="project-caption">Journey maps</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-system-maps.png"
+                                alt="System maps of the medication disposal process" class="maps-img" loading="lazy">
+                            <figcaption class="project-caption">System maps</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-jobs-to-be-done.png" alt="Jobs to be done framework"
+                                class="maps-img" loading="lazy">
+                            <figcaption class="project-caption">Jobs to be done</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-value-proposition-canvas.png" alt="Value proposition canvas"
+                                class="maps-img" loading="lazy">
+                            <figcaption class="project-caption">Value proposition canvas</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure class="m-0">
+                            <img src="../../images/medeor-blueprint.png"
+                                alt="Service blueprint of the Medeor pickup service" class="maps-img" loading="lazy">
+                            <figcaption class="project-caption">Service blueprint</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
+                <div class="maps-controls d-flex align-items-center gap-3">
+
+                    <button class="btn btn-site btn-site-outline rounded-pill px-4" type="button"
+                        data-bs-target="#mapsCarousel" data-bs-slide="prev">
+                        <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                        <span class="visually-hidden">Previous map</span>
+                    </button>
+
+                    <!-- uma bolinha por slide: o número em data-bs-slide-to é a posição do slide (começa em 0) -->
+                    <div class="carousel-indicators maps-indicators flex-grow-1">
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Journey maps 1"></button>
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="1"
+                            aria-label="Journey maps 2"></button>
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="2"
+                            aria-label="System maps"></button>
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="3"
+                            aria-label="Jobs to be done"></button>
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="4"
+                            aria-label="Value proposition canvas"></button>
+                        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="5"
+                            aria-label="Service blueprint"></button>
+                    </div>
+
+                    <button class="btn btn-site btn-site-outline rounded-pill px-4" type="button"
+                        data-bs-target="#mapsCarousel" data-bs-slide="next">
+                        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        <span class="visually-hidden">Next map</span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+        <!-- -------- .PROCESS ------------------------------------------------------------------------------------------- -->
+
+        <!-- -------- BLUE STRIPE (slides left) -------------------------------------------------------------------------- -->
+        <!-- mesma estrutura das outras páginas, só mudam as palavras -->
+        <div class="stripe" aria-hidden="true">
+            <div class="stripe-box">
+
+                <div class="stripe-group">
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                </div>
+
+                <div class="stripe-group">
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                    <span>Medeor</span><span>Service Design</span>
+                </div>
+
+            </div>
+        </div>
+        <!-- -------- .BLUE STRIPE --------------------------------------------------------------------------------------- -->
+
+        <!-- -------- VALIDATION ----------------------------------------------------------------------------------------- -->
+        <section class="side-margin section project-section" aria-labelledby="validation-title">
+            <div class="row">
+                <div class="col-12 col-lg-7 offset-lg-5">
+                    <h2 id="validation-title" class="section-title">Validation</h2>
+                    <p>In order to evaluate the service, we carried out the validation, consisting of the following
+                        steps and methods:</p>
+                    <ul>
+                        <li>Presentation of the Project Context</li>
+                        <li>Concept and objectives of the Service</li>
+                        <li>Presentation of the Blueprint</li>
+                        <li>Viewing of the Demo</li>
+                        <li>Display of posters and brochures</li>
+                        <li>Demonstration and explanation of the Webapp</li>
+                    </ul>
+
+                    <p>Four family members and friends who fit the user segments of the problem were selected. Regarding
+                        the materials used, for the presentation of the service, we used printed posters and a cell
+                        phone to display the demo and demonstrate the functionalities of the webapp.</p>
+
+                    <p>After the demonstration, we obtained positive results, with most participants wanting this
+                        project to become a reality in order to save time on travels. We received positive feedback
+                        regarding how easy it is to understand how the web app works, something that was considered
+                        before its development.</p>
+                </div>
+            </div>
+        </section>
+        <!-- -------- .VALIDATION ---------------------------------------------------------------------------------------- -->
+
+        <!-- -------- FINAL SERVICE -------------------------------------------------------------------------------------- -->
+        <section class="side-margin section" aria-labelledby="service-title">
+            <h2 id="service-title" class="section-title">Final Service</h2>
+
+            <div class="row g-4 g-md-5">
+
+                <div class="col-12 col-md-6">
+                    <img src="../../images/medeor-posters.png"
+                        alt="Medeor posters in street display boards, one with pills and one with a pickup van"
+                        class="project-img" loading="lazy">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="../../images/medeor-flyers.png" alt="Front and back of the Medeor information flyer"
+                        class="project-img" loading="lazy">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="../../images/medeor-van.png" alt="Medeor pickup van with a pill on the roof"
+                        class="project-img" loading="lazy">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="../../images/medeor-app.png"
+                        alt="Screens of the Medeor webapp: home, schedule a pickup, track a pickup and activity"
+                        class="project-img" loading="lazy">
+                </div>
+
+            </div>
+        </section>
+        <!-- -------- .FINAL SERVICE ------------------------------------------------------------------------------------- -->
+
+        <!-- -------- FINAL THOUGHTS ------------------------------------------------------------------------------------- -->
+        <section class="side-margin section project-section" aria-labelledby="thoughts-title">
+            <h2 id="thoughts-title" class="section-title">Final Thoughts</h2>
+
+            <div class="row g-4 g-md-5">
+                <div class="col-12 col-md-6">
+                    <p>Medeor shows what happens when a service is designed as a whole and not as a single screen. The
+                        webapp, the posters, the flyers and the pickup van tell the same story, from the first time
+                        someone sees the service in the street to the moment they schedule a pickup. Designing for two
+                        very different users, those who already know how to dispose of medications safely and those who
+                        know nothing about it, also kept the proposal simple: secure collection, just a click away. What
+                        I am most proud of is how well the service holds together, because every touchpoint makes the
+                        next step obvious.</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Medeor was a university project developed as a team, and it taught me how much a service depends
+                        on the moments around the screen: how people find it, how they trust it and how they come back
+                        to it. Looking back, I would test earlier and with more people. I believe in being wrong early,
+                        and the validation session showed how much a service changes once real people use it. The lesson
+                        I take to the next project is to let research and testing, and not assumptions, decide the
+                        direction.</p>
+                </div>
+            </div>
+        </section>
+        <!-- -------- .FINAL THOUGHTS ------------------------------------------------------------------------------------ -->
+
+        <!-- -------- MORE PROJECTS -------------------------------------------------------------------------------------- -->
+        <section class="side-margin section" aria-label="More projects">
+            <div class="d-flex flex-column flex-sm-row justify-content-between gap-3">
+                <a href="../design.html" class="btn btn-site btn-site-outline rounded-pill">
+                    <i class="bi bi-arrow-left" aria-hidden="true"></i> All projects
+                </a>
+                <a href="kranemann.html" class="btn btn-site btn-site-filled rounded-pill">
+                    Next project <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+        <!-- -------- .MORE PROJECTS ------------------------------------------------------------------------------------- -->
+    </main>
+
+    <!-- -------- FOOTER ------------------------------------------------------------------------------------------------- -->
+    <footer class="footer side-margin py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+
+            <p class="mb-0">Inês Azevedo · Designer & Illustrator</p>
+
+            <ul class="list-unstyled d-flex gap-4 mb-0">
+                <li>
+                    <a href="https://www.behance.net/inesazevedo" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-behance" aria-hidden="true"></i> Behance
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/inesazevedo-ia" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <p class="footer-copy mb-0 mt-4 text-center">© 2026 Inês Azevedo</p>
+    </footer>
+    <!-- -------- .FOOTER --------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- -------- JS BOOTSTRAP ---------------------------------------------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

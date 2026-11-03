@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inês Azevedo // Design & Illustration</title>
+
+    <!-- -------- FAVICON --------------------------------------------------------------------------------------------------- -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- -------- LINK BOOTSTRAP -------------------------------------------------------------------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- -------- LINK BOOTSTRAP ICONS -------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- -------- LINK CSS -------------------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- -------- MENU ------------------------------------------------------------------------------------------------------ -->
+    <nav class="navbar navbar-expand-md sticky-top" aria-label="Main navigation">
+        <div class="container-fluid side-margin">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo2.png" alt="Inês Azevedo - logo" class="nav-logo">
+            </a>
+
+            <!-- hamburguer button -->
+            <!-- (só aparece em ecrãs pequenos) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Open menu">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto gap-md-4 gap-lg-5">
+                    <li class="nav-item"><a class="nav-link" href="pages/design.html">Design</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/illustration.html">Illustration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- -------- .MENU ----------------------------------------------------------------------------------------------------- -->
+
+    <main>
+        <!-- -------- PRESENTATION --------------------------------------------------------------------------------------- -->
+        <section class="presentation side-margin py-5" aria-labelledby="presentation-title">
+            <div class="row align-items-md-start g-4 g-md-5">
+
+                <div class="col-12 col-md-5">
+                    <img src="images/me3.png" alt="Portrait of Inês" class="presentation-img">
+                </div>
+
+                <div class="col-12 col-md-7 presentation-text">
+                    <h1 id="presentation-title" class="presentation-title">Hi! My name is Inês</h1>
+                    <p>I'm a junior designer and illustrator with a multidisciplinary background in arts, design, and
+                        multimedia, with a particular focus in service design and children's illustration. I find
+                        inspiration in projects that tell stories and bring people together, and I believe design is a
+                        powerful tool for accessible and meaningful communication, capable of creating solutions driven
+                        by purpose, creativity, and inclusion.
+                    </p>
+                    <p>I consider myself a curious, responsible person with a great
+                        desire to learn, capable of working in a team and dealing with
+                        different challenges.
+                    </p>
+                    <!-- <p>I have a special interest in the areas of accessibility and universal design, inclusive design,
+                        ability-based design and design thinking, which I consider fundamental to creating truly
+                        user-centered digital experiences. Throughout my academic career, I have sought to integrate
+                        these principles into my projects, valuing research, empathy, and experimentation as an
+                        essential part of the creative process.
+                    </p> -->
+                </div>
+
+            </div>
+        </section>
+        <!-- -------- .PRESENTATION -------------------------------------------------------------------------------------- -->
+
+        <!-- -------- BLUE STRIPE (slides left) --------------------------------------------------------------- -->
+        <div class="stripe" aria-hidden="true">
+            <div class="stripe-box">
+
+                <!-- original group -->
+                <div class="stripe-group">
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                </div>
+
+                <!-- duplicate group (same as above) -->
+                <!-- é o que faz o loop parecer infinito -->
+                <div class="stripe-group">
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                    <span>Design</span><span>Illustration</span>
+                </div>
+
+            </div>
+        </div>
+        <!-- -------- .BLUE STRIPE ---------------------------------------------------------------------------------------- -->
+
+        <!-- -------- PROJECT CAROUSEL (slides right) ----------------------------------------------------- -->
+        <section class="projects py-5" aria-label="Featured Projects">
+            <h2 id="projects-title" class="section-title side-margin">Featured Projects</h2>
+            <div class="projects-box">
+
+                <!-- original group -->
+                <div class="projects-group">
+                    <img src="images/projeto1.png" alt="Project 1: The Three Little Pigs" class="projects-item"
+                        loading="lazy">
+                    <img src="images/projeto2.png" alt="Project 2: Design Atlas" class="projects-item" loading="lazy">
+                    <img src="images/projeto3.png" alt="Project 3: Choupal" class="projects-item" loading="lazy">
+                    <img src="images/projeto4.png" alt="Project 4: Medeor" class="projects-item" loading="lazy">
+                    <img src="images/projeto5.png" alt="Project 5: Kranemann's Illustration System"
+                        class="projects-item" loading="lazy">
+                    <img src="images/projeto6.png" alt="Project 6: Alta & Baixa" class="projects-item" loading="lazy">
+                </div>
+
+                <!-- duplicate group -->
+                <div class="projects-group" aria-hidden="true">
+                    <img src="images/projeto1.png" alt="" class="projects-item" loading="lazy">
+                    <img src="images/projeto2.png" alt="" class="projects-item" loading="lazy">
+                    <img src="images/projeto3.png" alt="" class="projects-item" loading="lazy">
+                    <img src="images/projeto4.png" alt="" class="projects-item" loading="lazy">
+                    <img src="images/projeto5.png" alt="" class="projects-item" loading="lazy">
+                    <img src="images/projeto6.png" alt="" class="projects-item" loading="lazy">
+                </div>
+
+            </div>
+        </section>
+        <!-- -------- .PROJECT CAROUSEL ---------------------------------------------------------------------------------- -->
+
+        <!-- -------- CALL TO ACTION ------------------------------------------------------------------------------------- -->
+        <section class="col-12 col-md-9 offset-md-3 side-margin py-5" aria-labelledby="title-cta">
+            <h2 id="title-cta" class="title-cta">
+                <a href="pages/contact.html">I'm looking forward to meeting you! <br> Shall we work together?</a>
+            </h2>
+        </section>
+        <!-- -------- .CALL TO ACTION ------------------------------------------------------------------------------------ -->
+    </main>
+
+    <!-- -------- FOOTER ------------------------------------------------------------------------------------------------- -->
+    <footer class="footer side-margin py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+
+            <p class="mb-0">Inês Azevedo · Designer & Illustrator</p>
+
+            <ul class="list-unstyled d-flex gap-4 mb-0">
+                <li>
+                    <a href="https://www.behance.net/inesazevedo" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-behance" aria-hidden="true"></i> Behance
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/inesazevedo-ia" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <p class="footer-copy mb-0 mt-4 text-center">© 2026 Inês Azevedo</p>
+    </footer>
+    <!-- -------- .FOOTER --------------------------------------------------------------------------------------------------- -->
+
+    <!-- -------- JS BOOTSTRAP ---------------------------------------------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
